@@ -1,29 +1,29 @@
 ---
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: javawebappbluedeployment
-spec:
-  replicas: 2
-  strategy:
-    type: RollingUpdate
-  selector:
-    matchLabels:
-      app: java-web-app
-      version: v1
-      color: blue
-  template:
+    apiVersion: apps/v1
+    kind: Deployment
     metadata:
-      name: javawebapppod
-      labels:
-        app: java-web-app
-        version: v1
-        color: blue
+      name: javawebappgreendeployment
     spec:
-      containers:
-      - name: javawebappcontainer
-        image: dockerdocker2023/frontendlive-appa
-        imagePullPolicy: Always
-        ports:
-        - containerPort: 8080
+      replicas: 2
+      strategy:
+        type: RollingUpdate
+      selector:
+        matchLabels:
+          app: java-web-app
+          version: v2
+          color: green
+      template:
+        metadata:
+          name: javawebapppod
+          labels:
+            app: java-web-app
+            version: v2
+            color: green
+        spec:
+          containers:
+          - name: javawebappcontainer
+            image: dockerdocker2023/frontendlive-appa
+            imagePullPolicy: Always
+            ports:
+            - containerPort: 8080
 ...
