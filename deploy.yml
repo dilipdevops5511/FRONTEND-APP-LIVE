@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: dockerdocker2023/
+        image: dockerdocker2023/frontendlive-app
         ports:
         - containerPort: 5000
 
