@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: javawebappcontainer
-        image: dockerdocker2023/frontendlive-app
+        image: dockerdocker2023/frontendlive-appa
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
